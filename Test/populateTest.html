@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <div style="margin: auto; width: 300px;">
+    <select id="SelectA" onchange="data(this.value);">
+      <option>Select</option>
+      <option value="lokasi">Lokasi</option>
+      <option value="tempat">Tempat</option>
+    </select>
+
+    <br><br><br>
+
+    <div id="poll">
+      <select>
+        <option>Select Lokasi</option>
+      </select>
+    </div>
+  </div>
+  <script>
+    function data(str) {
+      if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+      }else{
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+  
+      xmlhttp.onreadystatechange= function(){
+        if (this.readyState==4 && this.status==200) {
+          document.getElementById('poll').innerHTML = this.responseText;
+        }
+      }
+      xmlhttp.open("GET","helper.php?value"+str, true);
+      xmlhttp.send();
+    }
+  </script>
+</body>
+</html>

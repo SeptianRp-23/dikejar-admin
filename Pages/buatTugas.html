@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PT. D I K E J A R</title>
+
+    <link href="../Library/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/sidebar.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/form.css" rel="stylesheet">
+    <link href="../css/date.css">
+
+  </head>
+
+  <body>
+    <!-- menu -->
+    <div class="d-flex" id="wrapper">
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">PT. D I K E J A R </div>
+        <div class="list-group list-group-flush">
+          <a href="../index.html" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+          <a class="list-group-item list-group-item-action bg-light" style="font-weight: bold;">Buat Tugas</a>
+          <a href="listTugas.html" class="list-group-item list-group-item-action bg-light">List Tugas</a>
+          <a href="dataStaff.html" class="list-group-item list-group-item-action bg-light">Data Staff</a>
+          <a href="laporan.html" class="list-group-item list-group-item-action bg-light">Category</a>
+        </div>
+      </div>
+    <!-- menu -->
+
+      <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+          <!-- btn hide -->
+          <button class="btn btn-primary" id="menu-toggle"><img src="../Assets/Icons/arrows2.png"></button>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- btn hide -->
+
+          <!-- dropdown profile -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li class="nav-item dropdown">
+                <a href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="..//Assets/Avatar/profile32.png">
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Profile</a>
+                  <a class="dropdown-item" href="#">Change Password</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Logout</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- dropdown profile -->
+        </nav>
+        <div class="modal-header" style="padding-left: 50px;">
+          <h3>Add New Staff</h3>
+        </div>
+
+        <!-- form input -->
+        <div class="container">
+          <form id="add-data-form" class="form">
+            <div class="row">
+              <div class="col-75">
+                <input type="text" id="notugas" name="notugas" placeholder="No Tugas">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-75">
+                <input type="text" id="nama" name="nama" placeholder="Nama Petugas" style="margin-top: 15px">
+              </div>
+            </div>
+            <div class="row"> 
+              <div class="col-75">
+                  <select class="form-control" id="lokasi" name="lokasi" style="margin-top: 15px"></select> 
+                </div>
+                <div class="col-75"> 
+                  <select class="form-control" id="tempat" name="tempat" style="margin-top: 15px"></select> 
+                </div> 
+                <div class="col-75">
+                  <select class="form-control" id="mesin" name="mesin" style="margin-top: 15px"></select> 
+                </div> 
+                <div class="col-75">
+                  <select class="form-control" id="serial" name="serial" style="margin-top: 15px"></select> 
+                </div>
+                <div class="col-75" style="margin-top: 15px" >
+                  <input id="datepicker" name="date" placeholder="Tanggal" />
+                </div> 
+            </div> 
+            <div class="row">
+              <button class="submitbtn" id="submit">Simpan</button>
+            </div>
+          </form>
+        </div>
+        <!-- form input -->
+    </div>
+    <!-- import js -->
+
+    <script src="../Library/jquery/jquery.min.js"></script>
+    <!-- <script src="../Library/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <script>
+      $('#datepicker').datepicker({
+          uiLibrary: 'bootstrap4'
+      });
+  </script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("submit");
+      x.disabled = true;
+    }
+  </script>
+
+    <script>
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+    </script>
+    <script src="../Firebase.js"></script>
+    <script src="../Config/get_data_lokasi.js"></script>
+
+  </body>
+</html>

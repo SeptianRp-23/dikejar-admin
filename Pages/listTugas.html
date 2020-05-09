@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>PT. D I K E J A R</title>
+  
+  <link href="../Library/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/sidebar.css" rel="stylesheet">
+  <link href="../css/index.css" rel="stylesheet">
+  <link href="../css/table.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="../css/head.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">PT. D I K E J A R </div>
+      <div class="list-group list-group-flush">
+        <a href="../index.html" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+        <a href="buatTugas.html" class="list-group-item list-group-item-action bg-light">Buat Tugas</a>
+        <a class="list-group-item list-group-item-action bg-light" style="font-weight: bold;">List Tugas</a>
+        <a href="dataStaff.html" class="list-group-item list-group-item-action bg-light">Data Staff</a>
+        <a href="laporan.html" class="list-group-item list-group-item-action bg-light">Category</a>
+      </div>
+    </div>
+
+    <div id="page-content-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle"><img src="../Assets/Icons/arrows2.png"></button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item dropdown">
+              <a href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="..//Assets/Avatar/profile32.png">
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="#">Change Password</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Logout</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Content Table-->
+      <div class="modal-header">
+        <h3>List Tugas</h3>
+    </div>
+      <!--Table-->
+        <div class="container">
+            <table class="table table-responsive" id="listTugas">
+              <thead>
+                <tr>
+                  <th style="width: 200px;">No</th>
+                  <th style="width: 200px;">Tiket</th>
+                  <th style="width: 200px;">Lokasi</th>
+                  <th style="width: 300px;">Nama Tempat</th>
+                  <th style="width: 200px;">Mesin</th>
+                  <th style="width: 200px;">No Mesin</th>
+                  <th style="width: 200px;">Status</th>
+                  <th style="width: 200px;">Note</th>
+                </tr>
+              </thead>
+            </table>
+        </div>
+      <!--Table-->
+    </div>
+  <script src="../Library/jquery/jquery.min.js"></script>
+  <script src="../Library/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../Library/table.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
+  <script src="../Firebase.js"></script>
+  <script src="../Config/listTugas.js"></script>
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>

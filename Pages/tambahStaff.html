@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link href="../Library/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/sidebar.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/form.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+        <div class="bg-light border-right" id="sidebar-wrapper">
+          <div class="sidebar-heading">PT. D I K E J A R </div>
+          <div class="list-group list-group-flush">
+            <a href="../index.html" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+            <a class="list-group-item list-group-item-action bg-light">Buat Tugas</a>
+            <a class="list-group-item list-group-item-action bg-light">List Tugas</a>
+            <a class="list-group-item list-group-item-action bg-light" style="font-weight: bold;">Data Staff</a>
+            <a class="list-group-item list-group-item-action bg-light">Category</a>
+          </div>
+        </div>
+    
+        <div id="page-content-wrapper">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <button class="btn btn-primary" id="menu-toggle"><img src="../Assets/Icons/arrows2.png"></button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item dropdown">
+                  <a href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="..//Assets/Avatar/profile32.png">
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Change Password</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Logout</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+    <div class="modal-header" style="padding-left: 50px;">
+        <h3>Add New Staff</h3>
+    </div>
+    <!-- form input -->
+    <div class="container">
+      <form id="add-user-form" class="form">
+        <div class="row">
+          <div class="col-75">
+            <input type="text" id="id" name="id" placeholder="user id">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-75">
+            <input type="text" id="nama" name="nama" placeholder="Nama Lengkap">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-75">
+            <input type="text" id="email" name="email" placeholder="Email">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-75">
+            <input type="text" id="telpon" name="telpon" placeholder="Telpon">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-75">
+            <textarea id="alamat" name="alamat" placeholder="Alamat Lengkap" style="height:50px"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-75">
+            <input type="text" id="level" name="level" placeholder="Level">
+          </div>
+        </div>
+        <div class="row">
+          <button class="submitbtn" id="submit">Simpan</button>
+        </div>
+      </form>
+    </div>
+    <!-- form input -->
+    
+  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="../Config/addUser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
+    <script src="../Firebase.js"></script>
+</body>
+</html>

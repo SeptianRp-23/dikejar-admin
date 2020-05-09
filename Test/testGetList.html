@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <!-- <form id="select-form" class="browser-default custom-select">
+        <select id="selectName">
+            <option selected>Open this select menu</option>
+        </select>
+    </form> -->
+
+    <div class="form-group" id="vehi_num_mainte">
+        <label for="exampleFormControlInput100">Vehicle Number</label>
+        <select class="form-control" name="vehicle_num1" id="numberInput1" onchange="vehi_num_mainte_event();">
+             <option>-- Select Vehicle --</option>
+        </select>
+   </div>
+   <div class="form-group">
+        <label for="exampleFormControlInput101">VIN</label>
+        <input type="text" name="vin_maintenance" class="form-control" id="vinInput1" readonly="true">
+   </div>
+   <div class="form-group">
+        <label for="exampleFormControlInput102">Plate #</label>
+        <input type="text" name="plate_no1" class="form-control" id="platenoInput1" readonly="true">
+   </div>
+    
+      
+      
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script>
+    
+    <script src="../Firebase.js"></script>
+    <script src="./item.js"></script>
+</body>
+</html>
